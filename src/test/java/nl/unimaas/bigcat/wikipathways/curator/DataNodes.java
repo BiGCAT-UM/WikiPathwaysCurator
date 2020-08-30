@@ -66,9 +66,9 @@ public class DataNodes {
 			if (table.getRowCount() > 0) {
 				System.out.println("Table: " + table);
 				for (int i=1; i<=table.getRowCount(); i++) {
+					String datasource = table.hasColumn("datasource") ? table.get(i, "datasource") : "null";
 					errors += table.get(i, "homepage") + " " +
-						table.get(i, "node") + " (" +
-						table.get(i, "datasource") + ")\n";
+						table.get(i, "node") + " (" + datasource + ")\n";
 					errorCount++;
 				}
 			}
