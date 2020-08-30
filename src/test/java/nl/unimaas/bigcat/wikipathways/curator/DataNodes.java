@@ -62,7 +62,9 @@ public class DataNodes {
 			Assertions.assertNotNull(table);
 			String errors = "";
 			int errorCount = 0;
+			System.out.println("Table row count: " + table.getRowCount());
 			if (table.getRowCount() > 0) {
+				System.out.println("Table: " + table);
 				for (int i=1; i<=table.getRowCount(); i++) {
 					errors += table.get(i, "homepage") + " " +
 						table.get(i, "node") + " (" +
